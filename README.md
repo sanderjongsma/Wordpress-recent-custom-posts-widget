@@ -6,5 +6,3 @@ Just drag the widget inside of your widgetarea of choice and select the custom p
 **Version:** 0.1  
 
 Don't forget to include the widget in your functions.php
-
-## Changelog
