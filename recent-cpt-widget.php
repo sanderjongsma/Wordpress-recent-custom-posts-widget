@@ -35,7 +35,9 @@ class Widget extends WP_Widget {
                     <?php  while ( $query->have_posts() ) : $query->the_post(); ?>
                         <li><a href="<?php the_permalink() ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>"><?php if ( get_the_title() ) the_title(); else the_ID(); ?></a></li>
                     <?php endwhile; ?>
-                    <li><a href=<?php echo $all_url; ?>><?php echo $all; ?></a></li>
+                    <?php if ( !empty($all) || !empty($all_url) ) : ?>
+                        <li><a href=<?php echo $all_url; ?>><?php echo $all; ?></a></li>
+                    <?php endif; ?>
                 </ul>
 
             <?php echo $after_widget;
